@@ -714,6 +714,11 @@ namespace Quartz.Impl.MongoDB
             }
         }
 
+        public bool CalendarExists(string calName)
+        {
+            return RetrieveCalendar(calName) != null;
+        }
+
         /// <summary>
         /// Determine whether a <see cref="IJob"/> with the given identifier already 
         /// exists within the scheduler.
